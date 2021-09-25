@@ -1,4 +1,4 @@
-En este primer commit agrego el proyeto a la rama master, hasta este punto ya he realizado la
-primer migracion en la cual genero tabla de users y tabla de users_domicilio con sus respectivos 
-campos.
-
+En este commit agrego el campo fecha_nacimiento a la tabal users haciendo un rollback de laravel
+con:   php artisan migrate:reset   y   php artisan migrate hay otras formas de hacer lo mismo, 
+sin embargo, fue la que primero se me vio a la mente por la sencilles del proyecto. 
+nota: el campo de fecha_nacimiento agregado a la tabla users es de tipo date() 
