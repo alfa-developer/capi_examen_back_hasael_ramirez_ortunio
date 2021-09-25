@@ -3,13 +3,20 @@
 namespace Database\Factories;
 
 use App\Models\Team;
+
 use App\Models\User;
+use Illuminate\Support\Carbon;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Laravel\Jetstream\Features;
 
 class UserFactory extends Factory
 {
+
+    /*generar fechas aleatorias*/ 
+    
+    
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,10 +31,15 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        
+        //generando fechas aleatorias.
+        $randomDate = Carbon::now()->subYear(rand(0, 30))->subDays(rand(0, 25))->format('Y-m-d');
+    
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'fecha_nacimiento'=> $randomDate, /*fecha de nacimiento aleatoria*/ 
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ];
