@@ -10,7 +10,8 @@ class UserController extends Controller
 {
     public function listarUsuarios(){
     
-        $users = User::all(); 
+        //$users = User::all(); 
+        $users = User::paginate(25);
     
         return view('users.index', compact('users')); 
     }

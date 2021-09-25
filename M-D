@@ -1,5 +1,2 @@
-Commit final por cuestiones de tiempo no alcance a agregar una tabla y vaciar los campos
-con una relacion de ambas tablas . y otros puntos. 
-
-Tambien tuve problemas con los seeders en la version que use de laravel que es la 8 
-sin embargo, agregue loggin completo. 
+Agrego los seeders de los usuarios que me dieron problemas, se configuro la factory y los seeders
+para agregar con fechas aleatorias con carbon 100 usuarios. 
